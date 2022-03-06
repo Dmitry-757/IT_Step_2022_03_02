@@ -10,7 +10,7 @@ enum DayWeek {
  * Написать программу, которая предлагает пользователю
  * ввести c клавиатуры номер дня недели, и в ответ показывает название этого дня (например, 6 – это суббота).
  */
-public class DayOfWeek {
+public class dz1_DayOfWeek {
     public static void main(String[] args) {
         int numDay;
         System.out.println("input day of the week number");
