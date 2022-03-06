@@ -5,9 +5,13 @@ import java.util.Scanner;
 enum DayWeek{Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday;
 }
 
+/**
+ Написать программу, которая предлагает пользователю
+ ввести c клавиатуры номер дня недели, и в ответ показывает название этого дня (например, 6 – это суббота).
+ */
 public class DayOfWeek {
     public static void main(String[] args) {
-        int numDay=0;
+        int numDay;
         System.out.println("input day of the week number");
         try (Scanner sc = new Scanner(System.in)){ //sc.close();
             if (sc.hasNextInt()) {
