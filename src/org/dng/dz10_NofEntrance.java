@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class dz10_NofEntrance {
     public static void main(String[] args) {
         int numFlat, amountFlatsOnStage;
-        System.out.println("input number of flat and amount flats on each stage");
+        System.out.println("input number of flat and amount flats on each stage (n m)");
         try (Scanner sc = new Scanner(System.in)) { //sc.close();
             if (sc.hasNextInt()) {
                 numFlat = sc.nextInt();
@@ -32,9 +32,7 @@ public class dz10_NofEntrance {
             System.out.println(e.getMessage());
             return;
         }
-
         int numEntrance = (numFlat % (amountFlatsOnStage * 9) == 0) ? (numFlat / (amountFlatsOnStage * 9)) : (numFlat / (amountFlatsOnStage * 9) + 1);
         System.out.printf("flat № %d is in %d entrance", numFlat, numEntrance);
-
     }
 }
