@@ -3,18 +3,17 @@ package org.dng;
 import java.util.Scanner;
 
 /**
- С клавиатуры вводится время (количество часов от 0 до  24) – программа выводит приветствие, соответствующее
- введенному времени (например, ввели 15 часов – выводится приветствие «Добрый день»).
+ * С клавиатуры вводится время (количество часов от 0 до  24) – программа выводит приветствие, соответствующее
+ * введенному времени (например, ввели 15 часов – выводится приветствие «Добрый день»).
  */
-public class Daytime {
+public class dz2_Daytime {
     public static void main(String[] args) {
         int hour;
         System.out.println("input hour from 0 to 24");
-        try (Scanner sc = new Scanner(System.in)){ //sc.close();
+        try (Scanner sc = new Scanner(System.in)) { //sc.close();
             if (sc.hasNextInt()) {
                 hour = sc.nextInt();
-            }
-            else{
+            } else {
                 throw new Exception("wrong input...");
             }
         } catch (Exception e) {

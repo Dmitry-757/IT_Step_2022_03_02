@@ -12,7 +12,7 @@ import java.util.Scanner;
  * Знак: Стрелец
  * Год: Тигра
  */
-public class ZodiacSign {
+public class dz5_ZodiacSign {
     public static void main(String[] args) {
         int d, m, y;
         System.out.println("input birth day (d m y)");
@@ -25,7 +25,7 @@ public class ZodiacSign {
                 throw new IllegalArgumentException("wrong input...");
             }
             //проверку на корректность введенных данных делать лень ))
-            if((d>31)||(d<1)){
+            if ((d > 31) || (d < 1)) {
                 throw new IllegalArgumentException("number of day must be between 1 and 31");
             }
         } catch (IllegalArgumentException e) {
@@ -112,18 +112,16 @@ public class ZodiacSign {
         sign[11] = "рыбы";
 
         for (int i = 0; i < 12; i++) {
-            if ((period[i][1] == m)&&(period[i][0] <= d) && (d <= 31))  {
-                    System.out.println("Zodiac sign is " + sign[i]);
-                    break;
+            if ((period[i][1] == m) && (period[i][0] <= d) && (d <= 31)) {
+                System.out.println("Zodiac sign is " + sign[i]);
+                break;
+            } else if ((period[i][3] == m) && (d <= period[i][2]) && (1 <= d)) {
+                System.out.println("Zodiac sign is " + sign[i]);
+                break;
             }
-            else if ((period[i][3] == m)&&(d <= period[i][2]) && (1 <= d)) {
-                    System.out.println("Zodiac sign is " + sign[i]);
-                    break;
-            }
-
         }//for (int i = 0; i < 11; i++)
 
-        //new year in china is 27.01
+        //year in china
         int age = y - 1924;
         int chineseYear = age % 12;
 

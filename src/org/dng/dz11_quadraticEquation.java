@@ -2,7 +2,7 @@ package org.dng;
 
 import java.util.Scanner;
 
-public class quadraticEquation {
+public class dz11_quadraticEquation {
     public static void main(String[] args) {
         int a, b, c;
         double x1, x2;
@@ -22,8 +22,8 @@ public class quadraticEquation {
             if (d < 0) {
                 System.out.println("solution is absent in real numbers");
             } else {
-                x1 = (-b + Math.sqrt(d))/(2*a);
-                x2 = (-b - Math.sqrt(d))/(2*a);
+                x1 = (-b + Math.sqrt(d)) / (2 * a);
+                x2 = (-b - Math.sqrt(d)) / (2 * a);
                 System.out.printf("radicals are: x1 = %f, x2 = %f", x1, x2);
             }
         }
